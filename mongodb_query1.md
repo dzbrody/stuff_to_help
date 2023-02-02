@@ -2,7 +2,7 @@
 
 Here's an example MongoDB query to search across all collections for a field "userId":
 
-`
+```
 db.getCollectionNames().forEach(function(collection) {
    var cursor = db[collection].find({"userId": {$exists: true}});
    if (cursor.count() > 0) {
@@ -12,7 +12,7 @@ db.getCollectionNames().forEach(function(collection) {
       });
    }
 });
-`
+```
 
 This query uses the getCollectionNames() method to retrieve a list of all collections in the current database. It then loops through each collection and performs a find() operation with a query filter of {"userId": {$exists: true}}, which returns all documents that have a field "userId".
 
